@@ -1,0 +1,65 @@
+conditionnal rendering & list
+1 - chft kifach n afficher chi haja selon condition o chft elach kayna key
+a - ila kant gha if c'est a dire t7a9at l condition n afficher sinon maytl3 walo hna nkhdm gha b &&
+b - ila kant baghu anaho si true tban haja si false haja akhra ndir ternary operator ola if statement li bghit
+
+memoization ( remmebering)
+useMemo et useCallback se sont des hooks qui essage de memoriser des données specifique
+cad kat7awl tfakar data
+
+info!!!
+rendering f function compoent howa anaho react kayexecuter l function component
+rendering dans la classe component react kaysayab man l composant un objet
+o kay3yt la methode render
+
+rendering f function compoent howa anaho react kayexecuter l function component
+had star bdabt howa li ghaykhalina nfhmo elach kayna memoizing dayta (react hooks)
+
+si j'ai une fonction dans un composant fonction , et cette derniere
+fait un traitement qui prent beaucoup de temps , le probleme c'est que
+apres changement dans le state react va faire le re-rendering et on a dit QUE
+le re-rendering cad il execute la fonction composant dans il va executer le tous
+a nouveau (aussi que la fonction complexe) il va l'ec=xecuter
+donc c'est un grand problemew ⛔⛔⛔⛔⛔
+
+si je veux tester ou bien recuperer le temps prenn" par une instruction on utilise
+console.time("string value quelquonc")
+console.timeEnd("string value quelquonc")
+
+---- homa rah kaykhdmo fhal chkal dyal useEffect fblan syntax o dependencies
+[] ghadi tkhdm fl fonction mra whda o tkhznha
+
+/_
+\*\*useMemo : katkhzn value katl ela value kifma bgha tkon , mohim value li t genrat liya
+man wra whd lhsab l=li kaykhod wahd lwaqt rahiiib 🧯🧯🧯
+(simple value , object , arrays ....
+_/
+
+logiquemnt si react a fait le re-rendering d'un composant parent c'est normale tous les childs composant
+va aussi les faire un re-render
+
+**\*\***Memo dans le child composant****\*\*****
+si j'ai un child composant et je veux que si les props ne changement pas
+que react ne fait pas le re-render du child lorsque le parent fait le re-render
+parceque c'est pas la peine dans ce cas on utilise memo(voir documentation
+comment l'utiliser)
+
+\*\*\*https://chatgpt.com/g/g-p-693a9c1b53808191986a34c91ba0efb2-react/c/69596564-32b4-832f-967b-95bb7dc7424e
+akhir part fih l concept dyal usecallback detaileto meah mzzzn
+⛔⛔⛔⛔⛔⛔fonction f js raha objet mnin kansifto smiya
+dyalha rah kansifto une adresse c'est pour cela
+mnin child kaybghi ysift data kayhtaj anaho l parent
+ysayab lih callback mnin kansiftoha f prpos
+hna kansifto adress li kayna wst lparent
+dkchi elach child mnin kayexecuteha par exemple basant
+ela chi event kaytbdl l parent , surtout ila kant chi state
+ki bda yban lik l parent li tbdl parceque
+child endo l adress mnin bdl fiha timpacta l parent
+⛔⛔⛔⛔⛔⛔ f le monde de programmation kolchi mbaser
+ela l'adresse memeoire f l'adresse kolchi kay communiuqer
+o kay2atar emla chi lakhor c'est a dire les objets basant
+ela les adreesse memoire
+dkchi elach application poo c'est un ensemble des objets
+communique entre eux basant sur les adresses memoire , les pointeurs
+qui se trouve dans le stack ( le thread local) qui point vers l'objet
+qui se trouve dans la memoire partagé le heap

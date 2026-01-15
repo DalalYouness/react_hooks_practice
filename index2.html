@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function user(name) {
+        let score = 0;
+
+        return {
+          getName: () => name,
+          addPoint: () => score++,
+          getScore: () => score,
+        };
+      }
+
+      let user1 = user("youness");
+      console.log(user1.getName());
+      user1.addPoint();
+      user1.addPoint();
+      user1.addPoint();
+      user1.addPoint();
+      console.log(user1.getScore());
+    </script>
+  </body>
+</html>
+
+/* objet context session objet request objet */ CURL pour tester les apis dans
+la lignes de commandes

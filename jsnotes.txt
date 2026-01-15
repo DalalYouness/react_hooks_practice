@@ -1,0 +1,112 @@
+des choses nouveaux pour moi
+
+
+//arrow functions
+1 - ila bghit nrj3 un objet f one-line ndir () hit js ila drt
+const print = () => {name:"youness"} maghay3rfch wach hada
+block ola obj khasni ndir
+
+const print = () => ({name:"youness"})
+
+2- arrow function ma3andhach this dyalha c'est a dire hiya
+katwrt this man parent scope dkchi elach
+manst3mlhach ka methode f obj ola class hut ila st3mlt wst
+manha this hiya makay3tbrhach js bali comportement l obj
+
+//default values
+6️⃣ Default Expressions (Dynamic Defaults)
+Defaults can be expressions:
+
+function total(price, tax = price * 0.1) {
+  console.log(price + tax);
+}
+
+total(100);  // tax becomes 10
+---------------------------------------------
+7️⃣ Using Functions as Default Values
+function getUser() {
+  return "Anonymous";
+}
+
+function greet(name = getUser()) {
+  console.log("Hello " + name);
+}
+
+greet();
+
+
+
+Output:
+
+Hello Anonymous
+-----------------------------------------------
+Default parameters → Prevent undefined and reduce checks
+
+
+//return
+Returning Without a Value → undefined (return;)
+
+-----------------------------------
+🔹 Functions Always Return Something
+
+If no return is written → JavaScript returns undefined by default.
+-----------------------------------
+Inner Functions Can Access Outer Variables (Lexical Scope)
+
+function outer() {
+  let value = 42;
+
+  function inner() {
+    console.log(value);
+  }
+
+  inner();
+}
+
+outer();
+
+Output:
+
+42
+
+📌 This is the foundation of closures.
+
+********************************************************************************************************
+Closures, Callbacks & First-Class Functions
+-------------------------------------------
+js treat function like first Class function fhal streams in java mnin kansifto une implementation
+d'une interface fonctionnel
+
+kifma kan3rfo une methode dans java par ex ou bien c# ila 7tajt l un objet bach y3awnha kan3tiwha ref dyalo
+la memee chose en js mnin kansifto function f parametre js kat3aml les fonction
+ka des types ref cad comme objet les fonction en js se sont des objets
+
+donc fhal java finma nbghi nsift une fonction anbda ngol l dmaghi
+l dik l function de base wach m7taja had la fonction tkhdm lik whd
+l7aja hadi ref dyalha soit deja katkon o kan3tiha liha soit kansiftha liha
+a la vole par function annonyme ou bien arrow function
+
+cad les fonctions peuvent etre des inputs en js
+
+A callback is a function passed into another function to run later.
+
+important❗❗❗❗❗❗
+جملة تحفظها 🔥
+
+Passing a function as parameter = passing behavior
+وهو قلب:
+
+Functional Programming
+
+Callbacks
+
+Strategy Pattern
+
+Streams / LINQ
+جملة تقنية تحفظها 📌
+
+Functions as parameters = Behavior as a value
+
+ولا فـ لغة المهندسين 😄:
+
+We pass algorithms, not data

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #eaecef;
+}
+
+.header-cmp svg {
+  font-size: 40px;
+}
+
+li:hover {
+  background-color: rgb(96, 197, 96);
+  cursor: pointer;
+}
+
+.sidebar {
+  position: absolute;
+  left: -100%;
+  transition: 1.5s;
+  -webkit-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+}
+
+.sidebar.active {
+  left: 0;
+}
