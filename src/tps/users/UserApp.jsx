@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserTable from "./UserTable";
 import UsersAdd from "./UsersAdd";
+import UserLayout from "./UserLayout";
 
 // const INITIAL_VALUES = [
 //   {
@@ -28,25 +29,9 @@ const UserApp = () => {
     setusers((prevState) => [...prevState, user.payload]);
     setlastId((prevState) => prevState + 1);
   };
-  /*
-    TODO:
-       1 - endi le formulaire li howa composant
-       child dyal app composant li fih state
-       dyal users
-       2 - bghit mnin nwrk f submit nbdl f state bach le composant
-       parent ydir re-render
-       3 - data ghada doz man end child l parent
-       4 - donc bach child yqdr ydwi mea lparent
-       ghaykhs l parent ywjd lih une callback une ref
-       5 - child khayakhod chno kayn f refs wi sift f l on click
-       man l callback li waslah
-       6 - parent ydir setUsers
-  */
   return (
     <div className="container my-3 mx-auto">
-      <UsersAdd userId={lastId + 1} onAddUser={addUser} />
-      <hr />
-      <UserTable users={users} />
+      <UserLayout />
     </div>
   );
 };
