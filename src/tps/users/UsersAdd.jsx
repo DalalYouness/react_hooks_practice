@@ -1,8 +1,10 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
+import UserContext from "./UserContext";
 
-const UsersAdd = ({ userId, onAddUser }) => {
+const UsersAdd = ({ onAddUser }) => {
   const fullName = useRef(null);
   const country = useRef(null);
+  const userContext = useContext(UserContext);
 
   const resetForm = () => {
     fullName.current.value = "";
@@ -12,7 +14,7 @@ const UsersAdd = ({ userId, onAddUser }) => {
     e.preventDefault();
     onAddUser({
       payload: {
-        id: userId,
+        id: userContext.lastId,
         fullName: fullName.current.value,
         country: country.current.value,
       },
@@ -31,7 +33,7 @@ const UsersAdd = ({ userId, onAddUser }) => {
           id="id"
           name="id"
           className="form-control"
-          value={userId}
+          value={userContext.lastId + 1}
           readOnly
         />
       </div>

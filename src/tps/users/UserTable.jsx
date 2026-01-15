@@ -1,4 +1,8 @@
-const UserTable = ({ users }) => {
+import { useContext } from "react";
+import UserContext from "./UserContext";
+
+const UserTable = () => {
+  let userContext = useContext(UserContext);
   return (
     <div>
       <h2 className="text-success">User</h2>
@@ -11,8 +15,8 @@ const UserTable = ({ users }) => {
           </tr>
         </thead>
         <tbody>
-          {users.length > 0 ? (
-            users.map((user) => (
+          {userContext.users.length > 0 ? (
+            userContext.users.map((user) => (
               <tr key={user.id}>
                 <td>{user.id}</td>
                 <td>{user.fullName}</td>

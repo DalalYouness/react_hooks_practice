@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-const UsersEdit = ({ userId, onAddUser }) => {
+const UserEdit = ({ userId, onAddUser }) => {
   const fullName = useRef(null);
   const country = useRef(null);
 
@@ -72,4 +72,4 @@ const UsersEdit = ({ userId, onAddUser }) => {
   );
 };
 
-export default UsersEdit;
+export default UserEdit;

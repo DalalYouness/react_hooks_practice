@@ -2,6 +2,7 @@ import { useState } from "react";
 import UserTable from "./UserTable";
 import UsersAdd from "./UsersAdd";
 import UserLayout from "./UserLayout";
+import UserContext from "./UserContext";
 
 // const INITIAL_VALUES = [
 //   {
@@ -30,8 +31,15 @@ const UserApp = () => {
     setlastId((prevState) => prevState + 1);
   };
   return (
-    <div className="container my-3 mx-auto">
-      <UserLayout />
+    <div className="container mx-auto">
+      <UserContext.Provider
+        value={{
+          users: users,
+          lastId: lastId,
+        }}
+      >
+        <UserLayout />
+      </UserContext.Provider>
     </div>
   );
 };

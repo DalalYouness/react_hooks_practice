@@ -18,9 +18,10 @@ import Users from "./customhooks/fetchdataexemple/Users.jsx";
 import Posts from "./customhooks/fetchdataexemple/Posts.jsx";
 import SearchUsers from "./customhooks/searchuserexemple/SearchUsers.jsx";
 import UserApp from "./tps/users/UserApp.jsx";
+import UserRouter from "./tps/users/UserRouter.jsx";
+import { StrictMode } from "react";
 createRoot(document.getElementById("root")).render(
-  //<StrictMode>
-  <div>
-    <UserApp />
-  </div>
+  <StrictMode>
+    <UserRouter />
+  </StrictMode>
 );
